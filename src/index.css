@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-hotel-light font-sans text-gray-800; }
+}
+
+@layer components {
+  .btn-gold    { @apply bg-hotel-gold text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-600 transition-all duration-200 shadow-md; }
+  .btn-outline { @apply border-2 border-hotel-gold text-hotel-gold px-6 py-2 rounded-lg font-medium hover:bg-hotel-gold hover:text-white transition-all duration-200; }
+  .card        { @apply bg-white rounded-2xl shadow-md p-6; }
+  .input-field { @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-hotel-gold focus:border-transparent transition; }
+  .badge-available { @apply bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+  .badge-occupied  { @apply bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+  .badge-pending   { @apply bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+  .badge-confirmed { @apply bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+  .badge-completed { @apply bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+}
+
+@media print {
+  body * { visibility: hidden; }
+  #invoice, #invoice * { visibility: visible; }
+  #invoice { position: absolute; left: 0; top: 0; width: 100%; }
+}
