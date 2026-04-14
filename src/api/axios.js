@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 const API = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL
 })
 
-// JWT disabled - no token header needed
 export default API
