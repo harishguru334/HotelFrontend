@@ -14,7 +14,7 @@ export default function Signup() {
     e.preventDefault()
     setLoading(true)
     try {
-      const { data } = await API.post('/api/user/signup', form)
+      const { data } = await API.post('/api/auth/register', form)
       login(data.user, data.token)
       toast.success('Account created!')
       navigate('/dashboard')
